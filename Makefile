@@ -8,5 +8,5 @@ pull-linters: ## Pull all used linter images
 lint: pull-linters  ## Run the markdown linter
 	@echo
 	# Running markdownlint against all markdown files in this project...
-	docker run -v `pwd`:/workspace ${MARKDOWN_LINTER} /workspace
+	@find . -path ./meetups -prune -o -name "*.md" -exec docker run --rm -v `pwd`/{}:/workspace/{} ${MARKDOWN_LINTER} /workspace/{} \;
 	@echo ## Successfully linted Markdown.
