@@ -1,5 +1,4 @@
 # Content from the third meetup - October 24th 2017
-this is a testtstststststststtsttttttstststststststststtstststststtstssttsttt tsttstststststststst:wq
 
 ## Basics of docker networking
 
