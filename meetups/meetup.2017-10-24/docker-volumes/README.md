@@ -21,7 +21,7 @@ docker volume inspect ...
 docker container run -d --name postgres-1 -v psql-data:/var/lib/postgresql/data postgres
 ````
 
-### Lets do the same tihng but add a named volume
+### Lets do the same thing but add a named volume
 
 ````
 docker container run -d --name postgres-1 -v postgres-1-data:/var/lib/postgresql/data postgres
@@ -42,10 +42,9 @@ docker volume inspect postgres-1-data
 
 ### Examples
 ````
-make build 
+make build
 make run
 ````
 What do I need to do to make changes? Can I make them on the fly?
 
 ```make count```
-

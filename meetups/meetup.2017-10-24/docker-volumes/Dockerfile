@@ -1,6 +1,6 @@
 FROM ruby:2.1
 
-COPY . /usr/src/count
+COPY counter.rb /usr/src/count/counter.rb
 
 WORKDIR /usr/src/count
 
