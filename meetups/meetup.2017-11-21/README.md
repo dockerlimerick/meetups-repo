@@ -2,7 +2,7 @@
 
 ## Basics of docker swarm
 
-[README.md](docker-swarm/README.md)
+[Slide Deck](docker-swarm/Docker-Swarm.pdf)
 
 ## Basics of Kubernetes
 
