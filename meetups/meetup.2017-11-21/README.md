@@ -6,4 +6,4 @@
 
 ## Basics of Kubernetes
 
-[README.md]('kubernetes/Kubernetes Intro.pdf')
+[Slide Deck]('kubernetes/Kubernetes-Intro.pdf')
