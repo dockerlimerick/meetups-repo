@@ -2,7 +2,7 @@
 
 ## Basics of docker swarm
 
-[README.md](docker-volumes/README.md)
+[README.md](docker-swarm/README.md)
 
 ## Basics of Kubernetes
 
