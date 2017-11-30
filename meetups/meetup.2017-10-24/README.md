@@ -10,4 +10,4 @@
 
 ## Basics of docker compose
 
-[Slide Deck](docker-compose/Docker-compose.pdf)
+[Slide Deck](docker-compose/Docker-Compose.pdf)
