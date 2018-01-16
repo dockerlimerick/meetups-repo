@@ -3,7 +3,7 @@ Local vs Docker
 Depending on your level of comfort with command line tools & docker, you can download the .Net core sdk and develop locally or you can take advantage of docker and use a docker image for your local development environment.
 The following command will offer a command prompt into a pre-defined image that contains a bind mount for easy file access.
 
-```dotnet docker run -p 5000:80 -e "ASPNETCORE_URLS=http://+:80" -v $(pwd):/home/apps -it --rm microsoft/aspnetcore-build```
+```docker run -p 5000:80 -e "ASPNETCORE_URLS=http://+:80" -v $(pwd):/home/apps -it --rm microsoft/aspnetcore-build```
 
 Prerequisites (if choosing to develop locally)
 ==============================================
@@ -32,7 +32,7 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 ```
 <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
-  </ItemGroup>
+</ItemGroup>
 ```
 
 Pull any missing dependencies
@@ -113,7 +113,7 @@ public void ConfigureServices(IServiceCollection services)
         }
 ```
 
-__Note: The connection string in the example code snippets reference the sql server instance as sqlexpress. This won't work. Any ideas why? [Have a read of this](https://github.com/dockerlimerick/meetups-repo/blob/master/meetups/meetup.2017-10-24/docker-networking/README.md) to figure out why.__
+__Note: The connection string in the example code snippets reference the sql server instance as sqlexpress. This won't work. Any ideas why? [Have a read of this](https://github.com/dockerlimerick/meetups-repo/blob/master/meetups/meetup.2017-10-24/docker-networking/README.md) to figure it out. (or just ask if you're stuck)__
 
 ### Create the database migration (code first)
 ```
@@ -168,7 +168,7 @@ docker run -p 5000:80 --network blog-network --name blogs -d blog.mvc:latest
 
 It should be accessible on http://localhost:5000/blogs
 
-Remove the existing docker processes
+All done. Remove the existing docker processes before step 4
 ```docker rm -f sqlexpress blogs```
 
 Step 4 - Docker Compose to do the heavy lifting
