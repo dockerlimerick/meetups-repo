@@ -16,12 +16,12 @@ Step 1 - Build a basic app using dot net core
 Create a mvc project called blog.mvc, run it and check http://localhost:5000 to verify that it has been created successfully.
 ```
 dotnet new mvc -o blog.mvc -au None -f netcoreapp2.0
+cd blog.mvc/
 dotnet run
 ```
 
 Ctrl-c the running app, cd into the blog.mvc folder and add the following dependencies
 ```
-cd blog.mvc/
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
