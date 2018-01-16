@@ -15,6 +15,7 @@ Step 1 - Build a basic app using dot net core
 ================================================
 Create a mvc project called blog.mvc, run it and check http://localhost:5000 to verify that it has been created successfully.
 ```
+cd /home/apps
 dotnet new mvc -o blog.mvc -au None -f netcoreapp2.0
 cd blog.mvc/
 dotnet run
@@ -163,10 +164,10 @@ ENTRYPOINT ["dotnet", "blog.mvc.dll"]
 Build and run the blog.mvc docker image
 ```
 docker build -t blog.mvc:latest .
-docker run -p 5000:80 --network blog-network --name blogs -d blog.mvc:latest
+docker run -p 8080:80 --network blog-network --name blogs -d blog.mvc:latest
 ```
 
-It should be accessible on http://localhost:5000/blogs
+It should be accessible on http://localhost:8080/blogs
 
 All done. Remove the existing docker processes before step 4
 ```docker rm -f sqlexpress blogs```
@@ -194,7 +195,7 @@ services:
     depends_on:  
       - "sqlexpress"         
     ports:
-      - "5000:80"
+      - "8080:80"
 ```
 
 run the following commands to spin up the environment.
