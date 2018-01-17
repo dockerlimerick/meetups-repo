@@ -5,6 +5,8 @@ The following command will offer a command prompt into a pre-defined image that 
 
 ```docker run -p 5000:80 -e "ASPNETCORE_URLS=http://+:80" -v $(pwd):/home/apps -it --rm microsoft/aspnetcore-build```
 
+__Note: We discovered at the meetup that the latest version of docker for windows doesn't support volume mounts.__
+
 Prerequisites (if choosing to develop locally)
 ==============================================
 * .net core sdk
